@@ -13,6 +13,7 @@ def power_numbers(*numbers):
     """
     return [num ** 2 for num in numbers]
 
+
 # filter types
 ODD = "odd"
 EVEN = "even"
@@ -32,3 +33,5 @@ def filter_numbers(numbers_list, filter_type):
     """
     if filter_type == ODD:
         return [num for num in numbers_list if num % 2 != 0]
+    elif filter_type == EVEN:
+        return [num for num in numbers_list if num % 2 == 0]

@@ -30,5 +30,5 @@ def filter_numbers(numbers_list, filter_type):
     >>> filter_numbers([2, 3, 4, 5], EVEN)
     <<< [2, 4]
     """
-    if filter_type == ODD
+    if filter_type == ODD:
         return [num for num in numbers_list if num % 2 != 0]

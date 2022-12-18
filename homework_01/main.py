@@ -21,15 +21,15 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def filter_odd(numbers_list):
-    if (numbers_list % 2) != 0:
+def filter_odd(number):
+    if number % 2:
         return True
     else:
         return False
 
 
-def filter_even(numbers_list):
-    if (numbers_list % 2) == 0:
+def filter_even(number):
+    if (number % 2) == 0:
         return True
     else:
         return False

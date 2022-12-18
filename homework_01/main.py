@@ -35,6 +35,17 @@ def filter_even(numbers_list):
         return False
 
 
+def filter_prime(number):
+    if number == 2:
+        return True
+    if number < 2 or number % 2 == 0:
+        return False
+    for item in range(3, int(number ** 0.5) + 1, 2):
+        if not number % item:
+            return False
+    return True
+
+
 def filter_numbers(numbers_list: list, filter_type: str):
     """
     функция, которая на вход принимает список из целых чисел,
@@ -51,8 +62,6 @@ def filter_numbers(numbers_list: list, filter_type: str):
         return list(filter(filter_odd, numbers_list))
     elif filter_type == EVEN:
         return list(filter(filter_even, numbers_list))
+    elif filter_type == PRIME:
+        return list(filter(filter_prime, numbers_list))
 
-    # if filter_type == ODD:
-    #     return [num for num in numbers_list if num % 2 != 0]
-    # elif filter_type == EVEN:
-    #     return [num for num in numbers_list if num % 2 == 0]

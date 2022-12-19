@@ -11,7 +11,7 @@ def power_numbers(*args):
     >>> power_numbers(1, 2, 5, 7)
     <<< [1, 4, 25, 49]
     """
-    return list(map(lambda x: x ** 2, numbers))
+    return list(map(lambda x: x ** 2, args))
     # return [num ** 2 for num in numbers]
 
 

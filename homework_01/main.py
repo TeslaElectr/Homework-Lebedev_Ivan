@@ -4,7 +4,7 @@
 """
 
 
-def power_numbers(*numbers):
+def power_numbers(*args):
     """
     функция, которая принимает N целых чисел,
     и возвращает список квадратов этих чисел
@@ -29,7 +29,7 @@ def filter_odd(number):
 
 
 def filter_even(number):
-    if (number % 2) == 0:
+    if number % 2 == 0:
         return True
     else:
         return False

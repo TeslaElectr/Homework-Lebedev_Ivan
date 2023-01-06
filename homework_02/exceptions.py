@@ -7,19 +7,18 @@
 
 
 class LowFuelError(Exception):
-    def __init__(self, number):
-        self.text = 'Не хватает топлива для запуска'
-        self.number = number
+    def __init__(self, text):
+        self.text = text
+
 
 
 class NotEnoughFuel(Exception):
-    def __init__(self, number):
-        self.text = 'Недостаточно топлива'
-        self.number = number
+    def __init__(self, text):
+        self.text = text
 
 
 class CargoOverload(Exception):
-    def __init__(self, number):
-        self.text = 'Перегрущка'
-        self.number = number
+    def __init__(self, text):
+        self.text = text
+
 

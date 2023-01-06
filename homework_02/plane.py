@@ -10,13 +10,13 @@ class Plane(Vehicle):
     def __init__(self, cargo, max_cargo, *args, **kwargs):
         self.cargo = cargo
         self.max_cargo = max_cargo
-        super().__init__(args, kwargs)
+        super().__init__()
 
     def load_cargo(self, new_cargo):
         if self.cargo + new_cargo <= self.max_cargo:
             self.cargo += new_cargo
         else:
-            raise CargoOverload(new_cargo)
+            raise CargoOverload("Перегрузка")
 
     def remove_all_cargo(self):
         cargo_value = self.cargo

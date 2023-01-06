@@ -11,10 +11,11 @@ class Vehicle(ABC):
         self.started = False
 
     def start(self):
-        if self.fuel > 0:
-            self.started = True
-        else:
-            raise LowFuelError("Не достаточно топлива для запуска")
+        if not self.started:
+            if self.fuel > 0:
+                self.started = True
+            else:
+                raise LowFuelError("Не достаточно топлива для запуска")
 
     def move(self, distance):
         if self.fuel_consumption * distance <= self.fuel:

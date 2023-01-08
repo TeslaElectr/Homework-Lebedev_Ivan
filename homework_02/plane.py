@@ -12,7 +12,6 @@ class Plane(Vehicle):
         self.max_cargo = max_cargo
         super().__init__(*args, **kwargs)
 
-
     def load_cargo(self, new_cargo):
         if self.cargo + new_cargo <= self.max_cargo:
             self.cargo += new_cargo

@@ -7,15 +7,12 @@
 
 
 class LowFuelError(Exception):
-    def __init__(self, text):
-        self.text = text
+    pass
 
 
 class NotEnoughFuel(Exception):
-    def __init__(self, text):
-        self.text = text
+    pass
 
 
 class CargoOverload(Exception):
-    def __init__(self, text):
-        self.text = text
+    pass

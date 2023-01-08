@@ -7,14 +7,15 @@ from exceptions import CargoOverload
 
 class Plane(Vehicle):
 
-    def __init__(self, weight: int = 0, fuel: int = 0, fuel_consumption: float = 0, max_cargo: int = 0):
-        super().__init__(weight, fuel, fuel_consumption)
+    def __init__(self, max_cargo, *args, **kwargs):
         self.cargo = 0
         self.max_cargo = max_cargo
+        super().__init__(*args, **kwargs)
 
-    def load_cargo(self, weight):
-        if self.cargo + weight <= self.max_cargo:
-            self.cargo += weight
+
+    def load_cargo(self, new_cargo):
+        if self.cargo + new_cargo <= self.max_cargo:
+            self.cargo += new_cargo
         else:
             raise CargoOverload("Перегрузка")
 

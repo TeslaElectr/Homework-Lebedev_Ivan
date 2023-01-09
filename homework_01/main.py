@@ -3,6 +3,7 @@
 Функции и структуры данных
 """
 
+
 # test SSH key
 def power_numbers(*args):
     """
@@ -64,4 +65,3 @@ def filter_numbers(numbers_list: list, filter_type: str):
         return list(filter(filter_even, numbers_list))
     elif filter_type == PRIME:
         return list(filter(filter_prime, numbers_list))
-
